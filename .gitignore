@@ -1,4 +1,6 @@
 MANIFEST.bak
+MYMETA.json
+MYMETA.yml
 cover_db
 META.yml
 Makefile
