@@ -2,15 +2,17 @@ package Catalyst::Helper::Model::SMS;
 
 use strict;
 
+# ABSTRACT: Catalyst Helper for SMS::Send Models
+
 our $VERSION = '0.01';
 
 =head1 NAME
 
-Catalyst::Helper::Model::SMS - Helper for SMS::Send Models
+Catalyst::Helper::Model::SMS - Helper for SMS::Send based Models
 
 =head1 SYNOPSIS
 
-  script/create.pl model DBI SMS
+  script/create.pl model SMS SMS
 
 =head1 DESCRIPTION
 
@@ -24,19 +26,15 @@ Helper for SMS::Send Model.
 
 Makes a main model class
 
-=item mk_comptest
-
-Makes tests for the DBI Model.
-
 =back 
 
 =cut
 
 sub mk_compclass {
-  my ( $self, $helper ) = @_;
-  my $file = $helper->{file};
-  $helper->render_file( 'compclass', $file );
-  return 1;
+    my ( $self, $helper ) = @_;
+    my $file = $helper->{file};
+    $helper->render_file( 'compclass', $file );
+    return 1;
 }
 
 =head1 SEE ALSO
@@ -57,6 +55,8 @@ it under the same terms as perl itself.
 
 1;
 __DATA__
+
+=begin pod_to_ignore
 
 __compclass__
 package [% class %];

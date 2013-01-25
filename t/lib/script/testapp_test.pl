@@ -7,6 +7,6 @@ use FindBin;
 use lib "$FindBin::Bin/..";
 use Catalyst::Test 'TestApp';
 
-print request($ARGV[0])->content . "\n";
+print request( $ARGV[0] )->content . "\n";
 
 1;

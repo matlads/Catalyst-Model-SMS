@@ -1,15 +1,18 @@
 package Catalyst::Model::SMS;
+use 5.10.1;
 use Moose;
 use SMS::Send;
 extends 'Catalyst::Model::Adaptor';
 
+# ABSTRACT: Easy SMS sending from Catalyst Apps.
+#
 our $VERSION = 0.1;
 
 __PACKAGE__->config( class => 'SMS::Send' );
 
 has driver => (
-    is => 'ro',
-    isa => 'Str',
+    is      => 'ro',
+    isa     => 'Str',
     default => 'Test',
 );
 
