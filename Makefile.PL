@@ -9,6 +9,8 @@ all_from 'lib/Catalyst/Model/SMS.pm';
 
 requires 'Moose';
 requires 'namespace::autoclean';
+requires 'Catalyst::Model::Adaptor';
+requires 'SMS::Send';
 
 build_requires 'Catalyst::Runtime' => '5.80015';
 build_requires 'Test::WWW::Mechanize::Catalyst';
