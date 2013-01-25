@@ -1,21 +1,40 @@
 NAME
-    Catalyst::Model::SMS - Easy SMS sending for Catalyst Apps
+    Catalyst::Model::SMS - Catalyst Model for SMS::Send
+
+SYNOPSIS
+        # on the shell
+        $ script/myapp_create.pl model SMS
+
+        # in myapp.conf
+        <Model::SMS>
+            driver Test
+            <args>
+                _login admin
+                _password pa55w0rD
+            </args>
+        </Model::SMS>
 
 DESCRIPTION
+    Catalyst::Model::SMS is a thin proxy around SMS::Send. It can be
+    initialized using the Catalyst configuration file or method.
 
-Catalyst::Model::SMS is a thin proxy around SMS::Send. It can
-be initialized using the Catalyst configuration file or method. The
-following parameters are currently recognized
+OPTIONS
+  driver
+    SMS::Send driver name. You may specify 'Test' if you need a testing
+    driver. This module will default to 'Test' if this is not specified. See
+    SMS::Send for more information.
 
-    - driver, The SMS::Send driver name to use for the Model. This
-    defaults to 'Test', See SMS::Send for more information
+  args
+    SMS::Send arguments specific to the selected driver. These options are
+    passed directly to the appropriate SMS::Send driver.
 
 AUTHOR
-    Martin Atukunda <matlads@cpan.org>
+    Martin Atukunda, <matlads@cpan.org>
 
-COPYRIGHT & LICENSE
-    Copyright 2009 the above author(s).
+COPYRIGHT
+    Copyright 2013 the above author(s).
 
+LICENSE
     This sofware is free software, and is licensed under the same terms as
     perl itself.
 
