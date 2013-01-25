@@ -21,7 +21,7 @@ author_requires 'Test::Pod' => '1.14';
 
 author_tests 't/author';
 
-resources repository => 'git://somewhere.com/myproject.git';
+resources repository => 'git://github.com/matlads/Catalyst-Model-SMS.git';
 
 if ($Module::Install::AUTHOR) {
     system("pod2text lib/Catalyst/Model/SMS.pm > README")
