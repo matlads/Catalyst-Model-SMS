@@ -3,6 +3,8 @@ use Moose;
 use SMS::Send;
 extends 'Catalyst::Model::Adaptor';
 
+our $VERSION = 0.1;
+
 __PACKAGE__->config( class => 'SMS::Send' );
 
 has driver => (
@@ -25,11 +27,44 @@ __PACKAGE__->meta->make_immutable;
 
 Catalyst::Model::SMS - Catalyst Model for SMS::Send
 
+=head1 SYNOPSIS
+
+    # on the shell
+    $ script/myapp_create.pl model SMS
+
+    # in myapp.conf
+    <Model::SMS>
+        driver Test
+        <args>
+            _login admin
+            _password pa55w0rD
+        </args>
+    </Model::SMS>
+
 =head1 DESCRIPTION
 
 L<Catalyst::Model::SMS> is a thin proxy around SMS::Send. It can
-be initialized using the Catalyst configuration file or method. The
-following parameters are currently recognized:
+be initialized using the Catalyst configuration file or method.
+
+=head1 OPTIONS
+
+=head2 driver
+
+L<SMS::Send> driver name. You may specify 'Test' if you need a testing driver.
+This module will default to 'Test' if this is not specified. See L<SMS::Send>
+for more information.
+
+=head2 args
+
+L<SMS::Send> arguments specific to the selected driver. These options are
+passed directly to the appropriate L<SMS::Send> driver.
+
+=head1 METHODS
+
+=head2 mangle_arguments
+
+overridden method imported from Catalyst::Model::Adaptor. This method is
+passed the arguments, and returns them in a way suitable for SMS::Send->new
 
 =head1 AUTHOR
 
