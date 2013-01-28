@@ -1,5 +1,4 @@
 package Catalyst::Model::SMS;
-use 5.10.1;
 use Moose;
 use SMS::Send;
 extends 'Catalyst::Model::Adaptor';
