@@ -1,6 +1,7 @@
 Revision history for Catalyst-Model-SMS
 
 {{$NEXT}}
+	- Correct the version of module and distribution
 
 0.2       2013-03-31 20:23:50 UTC
 

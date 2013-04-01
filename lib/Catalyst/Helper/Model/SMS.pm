@@ -4,8 +4,6 @@ use strict;
 
 # ABSTRACT: Catalyst Helper for SMS::Send Models
 
-our $VERSION = '0.01';
-
 =head1 NAME
 
 Catalyst::Helper::Model::SMS - Helper for SMS::Send based Models
