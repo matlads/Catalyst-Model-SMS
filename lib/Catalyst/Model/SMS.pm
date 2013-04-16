@@ -5,6 +5,8 @@ extends 'Catalyst::Model::Adaptor';
 
 # ABSTRACT: Easy SMS sending from Catalyst Apps.
 
+our $VERSION = '0.4';
+
 __PACKAGE__->config( class => 'SMS::Send' );
 
 has driver => (

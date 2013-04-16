@@ -1,6 +1,9 @@
 package Catalyst::Helper::Model::SMS;
 
 use strict;
+use warnings;
+
+our $VERSION = '0.4';
 
 # ABSTRACT: Catalyst Helper for SMS::Send Models
 
