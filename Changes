@@ -2,6 +2,9 @@ Revision history for Catalyst-Model-SMS
 
 {{$NEXT}}
 
+0.4       2013-04-16 19:53:35 Europe/London
+         - All the pm files must carry the updated version number
+
 0.3       2013-04-16 19:40:14 Europe/London
         - CPAN does not understand that version 0.2.1 is greater than 0.2 so
 	  just go up by one
