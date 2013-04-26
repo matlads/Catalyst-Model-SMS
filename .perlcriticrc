@@ -1,0 +1,11 @@
+severity = harsh
+top      = 15
+exclude  = RcsKeywords
+; verbose  = 8
+
+[InputOutput::RequireCheckedSyscalls]
+functions = :builtins
+exclude_functions = print
+
+[Variables::ProhibitPunctuationVars]
+allow = $@ $! $+
