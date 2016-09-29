@@ -11,3 +11,5 @@ MANIFEST
 Makefile.old
 Catalyst-Model-SMS-*
 
+.build
+local
