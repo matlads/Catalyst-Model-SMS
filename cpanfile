@@ -21,3 +21,6 @@ requires 'Dist::Zilla::Plugin::Test::Kwalitee';
 requires 'Dist::Zilla::PluginBundle::Git';
 requires 'Dist::Zilla::Plugin::Test::Perl::Critic';
 requires 'Archive::Tar::Wrapper', 0.15;
+requires 'Dist::Zilla::Plugin::MetaProvides';
+requires 'Dist::Zilla::Plugin::MetaProvides::Package';
+requires 'Dist::Zilla::Plugin::MinimumPerl';
